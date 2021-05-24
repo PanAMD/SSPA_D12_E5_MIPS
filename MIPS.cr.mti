@@ -1,0 +1,99 @@
+D:/projects/MIPS/AuxBuffer.v {1 {vlog -work work -stats=none {D:\projects\MIPS\AuxBuffer.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module AuxBuffer
+
+Top level modules:
+	AuxBuffer
+
+} {} {}} D:/projects/MIPS/Adder.v {1 {vlog -work work -stats=none {D:\projects\MIPS\Adder.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Adder32B
+
+Top level modules:
+	Adder32B
+
+} {} {}} D:/projects/MIPS/memory.v {1 {vlog -work MIPS -stats=none {D:\projects\MIPS\memory.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Memory32B
+
+Top level modules:
+	Memory32B
+
+} {} {}} D:/projects/MIPS/Mux2_1.v {1 {vlog -work MIPS -stats=none {D:\projects\MIPS\Mux2_1.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Multiplexor
+
+Top level modules:
+	Multiplexor
+
+} {} {}} D:/projects/MIPS/RegistryStore.v {1 {vlog -work MIPS -stats=none {D:\projects\MIPS\RegistryStore.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module RegistryStore
+
+Top level modules:
+	RegistryStore
+
+} {} {}} D:/projects/MIPS/Adder4Bits.v {1 {vlog -work work -stats=none {D:\projects\MIPS\Adder4Bits.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Adder4B
+
+Top level modules:
+	Adder4B
+
+} {} {}} D:/projects/MIPS/Mips32Bits.v {1 {vlog -work work -stats=none {D:\projects\MIPS\Mips32Bits.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Mips32
+
+Top level modules:
+	Mips32
+
+} {} {}} D:/projects/MIPS/signExtender.v {1 {vlog -work work -stats=none {D:\projects\MIPS\signExtender.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module SignExtender
+
+Top level modules:
+	SignExtender
+
+} {} {}} D:/projects/MIPS/ControlUnit.v {1 {vlog -work MIPS -stats=none {D:\projects\MIPS\ControlUnit.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module ControlUnit
+
+Top level modules:
+	ControlUnit
+
+} {} {}} D:/projects/MIPS/FetchCycle.v {1 {vlog -work work -stats=none {D:\projects\MIPS\FetchCycle.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module FetchCycle
+
+Top level modules:
+	FetchCycle
+
+} {} {}} D:/projects/MIPS/ALU.v {1 {vlog -work MIPS -stats=none {D:\projects\MIPS\ALU.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module ALUKawaii
+
+Top level modules:
+	ALUKawaii
+
+} {} {}} D:/projects/MIPS/ShiftLeft2.v {1 {vlog -work work -stats=none {D:\projects\MIPS\ShiftLeft2.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module LeftShifter
+
+Top level modules:
+	LeftShifter
+
+} {} {}} D:/projects/MIPS/AluControl.v {1 {vlog -work work -stats=none {D:\projects\MIPS\AluControl.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module AluControl
+
+Top level modules:
+	AluControl
+
+} {} {}} D:/projects/MIPS/BasicMux.v {1 {vlog -work work -stats=none {D:\projects\MIPS\BasicMux.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Basic4BitsMux
+
+Top level modules:
+	Basic4BitsMux
+
+} {} {}}

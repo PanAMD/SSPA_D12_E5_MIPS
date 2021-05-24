@@ -1,0 +1,207 @@
+# Compile of ALU.v failed with 3 errors.
+# Compile of memory.v was successful.
+# Compile of Mux2_1.v was successful.
+# Compile of RegistryStore.v was successful.
+# Compile of ControlUnit.v was successful.
+# Compile of AluControl.v was successful.
+# Compile of DataPath.v was successful.
+# Compile of DataPathTB.v was successful with warnings.
+# Compile of ControlUnitTB.v was successful.
+# Compile of AluControlTB.v was successful.
+# Compile of FetchCycle.v was successful.
+# 11 compiles, 1 failed with 3 errors.
+# Compile of ALU.v failed with 1 errors.
+# Compile of memory.v was successful.
+# Compile of Mux2_1.v was successful.
+# Compile of RegistryStore.v was successful.
+# Compile of ControlUnit.v was successful.
+# Compile of AluControl.v was successful.
+# Compile of DataPath.v was successful.
+# Compile of DataPathTB.v was successful with warnings.
+# Compile of ControlUnitTB.v was successful.
+# Compile of AluControlTB.v was successful.
+# Compile of FetchCycle.v was successful.
+# 11 compiles, 1 failed with 1 error.
+# Compile of ALU.v was successful.
+# Compile of memory.v was successful.
+# Compile of Mux2_1.v was successful.
+# Compile of RegistryStore.v was successful.
+# Compile of ControlUnit.v was successful.
+# Compile of AluControl.v failed with 1 errors.
+# Compile of DataPath.v was successful.
+# Compile of DataPathTB.v was successful with warnings.
+# Compile of ControlUnitTB.v was successful.
+# Compile of AluControlTB.v was successful.
+# Compile of FetchCycle.v was successful.
+# 11 compiles, 1 failed with 1 error.
+# Compile of ALU.v was successful.
+# Compile of memory.v was successful.
+# Compile of Mux2_1.v was successful.
+# Compile of RegistryStore.v was successful.
+# Compile of ControlUnit.v was successful.
+# Compile of AluControl.v was successful.
+# Compile of DataPath.v was successful.
+# Compile of DataPathTB.v was successful with warnings.
+# Compile of ControlUnitTB.v was successful.
+# Compile of AluControlTB.v was successful.
+# Compile of FetchCycle.v was successful.
+# 11 compiles, 0 failed with no errors.
+# Compile of ALU.v was successful.
+# Compile of memory.v was successful.
+# Compile of Mux2_1.v was successful.
+# Compile of RegistryStore.v was successful.
+# Compile of ControlUnit.v failed with 1 errors.
+# Compile of AluControl.v was successful.
+# Compile of DataPath.v was successful.
+# Compile of DataPathTB.v was successful with warnings.
+# Compile of ControlUnitTB.v was successful.
+# Compile of AluControlTB.v was successful.
+# Compile of FetchCycle.v was successful.
+# Compile of BasicMux.v was successful.
+# Compile of ShiftLeft2.v was successful.
+# Compile of signExtender.v was successful.
+# Compile of Adder.v was successful.
+# Compile of Adder4Bits.v was successful.
+# 16 compiles, 1 failed with 1 error.
+# Compile of ALU.v was successful.
+# Compile of memory.v was successful.
+# Compile of Mux2_1.v was successful.
+# Compile of RegistryStore.v was successful.
+# Compile of ControlUnit.v was successful.
+# Compile of AluControl.v was successful.
+# Compile of DataPath.v was successful.
+# Compile of DataPathTB.v was successful with warnings.
+# Compile of ControlUnitTB.v was successful.
+# Compile of AluControlTB.v was successful.
+# Compile of FetchCycle.v was successful.
+# Compile of BasicMux.v was successful.
+# Compile of ShiftLeft2.v was successful.
+# Compile of signExtender.v was successful.
+# Compile of Adder.v was successful.
+# Compile of Adder4Bits.v was successful.
+# 16 compiles, 0 failed with no errors.
+# Compile of ALU.v was successful.
+# Compile of memory.v was successful.
+# Compile of Mux2_1.v was successful.
+# Compile of RegistryStore.v was successful.
+# Compile of ControlUnit.v was successful.
+# Compile of AluControl.v was successful.
+# Compile of DataPath.v was successful.
+# Compile of DataPathTB.v was successful with warnings.
+# Compile of ControlUnitTB.v was successful.
+# Compile of AluControlTB.v was successful.
+# Compile of FetchCycle.v was successful.
+# Compile of BasicMux.v was successful.
+# Compile of ShiftLeft2.v was successful.
+# Compile of signExtender.v was successful.
+# Compile of Adder.v was successful.
+# Compile of Adder4Bits.v was successful.
+# Compile of Mips32Bits.v failed with 1 errors.
+# Compile of AuxBuffer.v was successful.
+# 18 compiles, 1 failed with 1 error.
+# Compile of ALU.v was successful.
+# Compile of memory.v was successful.
+# Compile of Mux2_1.v was successful.
+# Compile of RegistryStore.v was successful.
+# Compile of ControlUnit.v was successful.
+# Compile of AluControl.v was successful.
+# Compile of DataPath.v was successful.
+# Compile of DataPathTB.v was successful with warnings.
+# Compile of ControlUnitTB.v was successful.
+# Compile of AluControlTB.v was successful.
+# Compile of FetchCycle.v was successful.
+# Compile of BasicMux.v was successful.
+# Compile of ShiftLeft2.v was successful.
+# Compile of signExtender.v was successful.
+# Compile of Adder.v was successful.
+# Compile of Adder4Bits.v was successful.
+# Compile of Mips32Bits.v failed with 1 errors.
+# Compile of AuxBuffer.v was successful.
+# 18 compiles, 1 failed with 1 error.
+# Compile of ALU.v was successful.
+# Compile of memory.v was successful.
+# Compile of Mux2_1.v was successful.
+# Compile of RegistryStore.v was successful.
+# Compile of ControlUnit.v was successful.
+# Compile of AluControl.v was successful.
+# Compile of DataPath.v was successful.
+# Compile of DataPathTB.v was successful with warnings.
+# Compile of ControlUnitTB.v was successful.
+# Compile of AluControlTB.v was successful.
+# Compile of FetchCycle.v was successful.
+# Compile of BasicMux.v was successful.
+# Compile of ShiftLeft2.v was successful.
+# Compile of signExtender.v was successful.
+# Compile of Adder.v was successful.
+# Compile of Adder4Bits.v was successful.
+# Compile of Mips32Bits.v was successful.
+# Compile of AuxBuffer.v was successful.
+# 18 compiles, 0 failed with no errors.
+# Compile of ALU.v was successful.
+# Compile of memory.v was successful.
+# Compile of Mux2_1.v was successful.
+# Compile of RegistryStore.v was successful.
+# Compile of ControlUnit.v was successful.
+# Compile of AluControl.v was successful.
+# Compile of DataPath.v was successful.
+# Compile of DataPathTB.v was successful with warnings.
+# Compile of ControlUnitTB.v was successful.
+# Compile of AluControlTB.v was successful.
+# Compile of FetchCycle.v was successful.
+# Compile of BasicMux.v was successful.
+# Compile of ShiftLeft2.v was successful.
+# Compile of signExtender.v was successful.
+# Compile of Adder.v was successful.
+# Compile of Adder4Bits.v was successful.
+# Compile of Mips32Bits.v was successful.
+# Compile of AuxBuffer.v was successful.
+# 18 compiles, 0 failed with no errors.
+# Compile of ALU.v was successful.
+# Compile of memory.v was successful.
+# Compile of Mux2_1.v was successful.
+# Compile of RegistryStore.v was successful.
+# Compile of ControlUnit.v was successful.
+# Compile of AluControl.v was successful.
+# Compile of DataPath.v was successful.
+# Compile of DataPathTB.v was successful with warnings.
+# Compile of ControlUnitTB.v was successful.
+# Compile of AluControlTB.v was successful.
+# Compile of FetchCycle.v was successful.
+# Compile of BasicMux.v was successful.
+# Compile of ShiftLeft2.v was successful.
+# Compile of signExtender.v was successful.
+# Compile of Adder.v was successful.
+# Compile of Adder4Bits.v was successful.
+# Compile of Mips32Bits.v was successful.
+# Compile of AuxBuffer.v was successful.
+# 18 compiles, 0 failed with no errors.
+# Compile of ALU.v was successful.
+# Compile of memory.v was successful.
+# Compile of Mux2_1.v was successful.
+# Compile of RegistryStore.v was successful.
+# Compile of ControlUnit.v was successful.
+# Compile of AluControl.v was successful.
+# Compile of FetchCycle.v was successful.
+# Compile of BasicMux.v was successful.
+# Compile of ShiftLeft2.v was successful.
+# Compile of signExtender.v was successful.
+# Compile of Adder.v was successful.
+# Compile of Adder4Bits.v was successful.
+# Compile of Mips32Bits.v was successful.
+# Compile of AuxBuffer.v was successful.
+# 14 compiles, 4 failed with no errors.
+# Compile of ALU.v was successful.
+# Compile of memory.v was successful.
+# Compile of Mux2_1.v was successful.
+# Compile of RegistryStore.v was successful.
+# Compile of ControlUnit.v was successful.
+# Compile of AluControl.v was successful.
+# Compile of FetchCycle.v was successful.
+# Compile of BasicMux.v was successful.
+# Compile of ShiftLeft2.v was successful.
+# Compile of signExtender.v was successful.
+# Compile of Adder.v was successful.
+# Compile of Adder4Bits.v was successful.
+# Compile of Mips32Bits.v was successful.
+# Compile of AuxBuffer.v was successful.
+# 14 compiles, 0 failed with no errors.
