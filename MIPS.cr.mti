@@ -75,19 +75,19 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	ALUKawaii
 
-} {} {}} D:/projects/MIPS/ShiftLeft2.v {1 {vlog -work work -stats=none {D:\projects\MIPS\ShiftLeft2.v}
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module LeftShifter
-
-Top level modules:
-	LeftShifter
-
 } {} {}} D:/projects/MIPS/AluControl.v {1 {vlog -work work -stats=none {D:\projects\MIPS\AluControl.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module AluControl
 
 Top level modules:
 	AluControl
+
+} {} {}} D:/projects/MIPS/ShiftLeft2.v {1 {vlog -work work -stats=none {D:\projects\MIPS\ShiftLeft2.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module LeftShifter
+
+Top level modules:
+	LeftShifter
 
 } {} {}} D:/projects/MIPS/BasicMux.v {1 {vlog -work work -stats=none {D:\projects\MIPS\BasicMux.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020

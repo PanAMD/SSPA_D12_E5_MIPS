@@ -10,11 +10,11 @@ module Multiplexor(
 always @*
 begin
     case (Op)
-        1'b1:
+        1'b0:
         begin
             outC=inA;
         end
-        1'b0:
+        1'b1:
         begin
             outC=inB;
         end

@@ -5,12 +5,14 @@ module Mips32(
 );
 
 wire [31:0]MEM_B, RD1_B,RD2_B,CFetch1;
+wire [31:0] muxyOut;
 wire [31:0] pcMux;
 wire [31:0] fetchMux4;
 wire [31:0]Mem_BFF4,Mux3_RegStr;
 wire [5:0]COpcode;
 wire [4:0]CRS,CRT,CRD,Mux_BFF;
 wire [2:0]ALUOP;
+wire [31:0]aluOpResult;
 
 //Control connections
 wire ZF,RegDst,Branch,MemRead,MemtoReg,MemWrite,ALUSrc,RegWrite;
@@ -94,9 +96,9 @@ RegistryStore regArray(
 
 Multiplexor muxy(
     .inA(RD2_B),
-    .inB(),
+    .inB(shiftedSumResult),
     .Op(ALUSrc),
-    .outC(Mux_BFF)
+    .outC(muxyOut)
 );
 
 AluControl aluControl(
@@ -107,25 +109,25 @@ AluControl aluControl(
 
 ALUKawaii mainALU(
 	.inputA(RD1_B),
-    .inputB(Mux_BFF),
+    .inputB(muxyOut),
 	.aluOperation(aluControlOut),
-	.result(CRes),
+	.result(aluOpResult),
 	.zeroFlag(ZF)
 );
 
 assign muxy3Flag =(Branch &  ZF);
 
-Memory mainMemory(
+Memory32B mainMemory(
     .MemWrite(MemWrite), 
     .MemRead(MemRead),
     .dataInput(RD2_B),
-    .dir(CRes),
+    .dir(aluOpResult),
     .result(Mem_BFF4)
 );
 
 Multiplexor muxyMemOut(
-    .inA(Mem_BFF4),
-    .inB(CRes),
+    .inA(aluOpResult),
+    .inB(Mem_BFF4),
     .Op(MemtoReg),
     .outC(Mux3_RegStr)
 );

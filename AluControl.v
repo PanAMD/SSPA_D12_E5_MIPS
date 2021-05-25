@@ -10,6 +10,7 @@ always @* begin
     case (opALU)
         3'b010: //R-type instruction UWU
         begin
+
         case (opFunction)
             6'b 000000: //NOP
 				begin
