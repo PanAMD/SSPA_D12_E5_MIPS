@@ -9,7 +9,7 @@ module FetchCycle(
 
 reg[31:0]outputDir;
 reg[7:0]pc;
-reg [7:0]Memory[399:0];
+reg [7:0]Memory[0:399];
  
 initial begin
     pc = 8'd 0;

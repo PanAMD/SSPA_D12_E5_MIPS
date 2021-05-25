@@ -1,4 +1,4 @@
-{D:/projects/MIPS final/SSPA_D12_E5_MIPS/Mips32Bits.v} {1 {vlog -work MIPS -stats=none {D:\projects\MIPS final\SSPA_D12_E5_MIPS\Mips32Bits.v}
+{D:/projects/MIPS final/SSPA_D12_E5_MIPS/Mips32Bits.v} {1 {vlog -work MIPS -stats=none {D:/projects/MIPS final/SSPA_D12_E5_MIPS/Mips32Bits.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module Mips32
 
@@ -33,7 +33,7 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	FetchCycle
 
-} {} {}} {D:/projects/MIPS final/SSPA_D12_E5_MIPS/AluControl.v} {1 {vlog -work MIPS -stats=none {D:\projects\MIPS final\SSPA_D12_E5_MIPS\AluControl.v}
+} {} {}} {D:/projects/MIPS final/SSPA_D12_E5_MIPS/AluControl.v} {1 {vlog -work MIPS -stats=none {D:/projects/MIPS final/SSPA_D12_E5_MIPS/AluControl.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module AluControl
 
@@ -68,7 +68,7 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	RegistryStore
 
-} {} {}} {D:/projects/MIPS final/SSPA_D12_E5_MIPS/ControlUnit.v} {1 {vlog -work MIPS -stats=none {D:\projects\MIPS final\SSPA_D12_E5_MIPS\ControlUnit.v}
+} {} {}} {D:/projects/MIPS final/SSPA_D12_E5_MIPS/ControlUnit.v} {1 {vlog -work MIPS -stats=none {D:/projects/MIPS final/SSPA_D12_E5_MIPS/ControlUnit.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module ControlUnit
 
@@ -82,14 +82,14 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	Memory32B
 
-} {} {}} {D:/projects/MIPS final/SSPA_D12_E5_MIPS/ALU.v} {1 {vlog -work MIPS -stats=none {D:\projects\MIPS final\SSPA_D12_E5_MIPS\ALU.v}
+} {} {}} {D:/projects/MIPS final/SSPA_D12_E5_MIPS/ALU.v} {1 {vlog -work MIPS -stats=none {D:/projects/MIPS final/SSPA_D12_E5_MIPS/ALU.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module ALUKawaii
 
 Top level modules:
 	ALUKawaii
 
-} {} {}} {D:/projects/MIPS final/SSPA_D12_E5_MIPS/Mux2_1.v} {1 {vlog -work MIPS -stats=none {D:\projects\MIPS final\SSPA_D12_E5_MIPS\Mux2_1.v}
+} {} {}} {D:/projects/MIPS final/SSPA_D12_E5_MIPS/Mux2_1.v} {1 {vlog -work MIPS -stats=none {D:/projects/MIPS final/SSPA_D12_E5_MIPS/Mux2_1.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module Multiplexor
 

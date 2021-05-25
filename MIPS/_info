@@ -10,7 +10,7 @@ z2
 cModel Technology
 Z0 dD:/projects/MIPS final/SSPA_D12_E5_MIPS
 vAdder32B
-Z1 !s110 1621868247
+Z1 !s110 1621920831
 !i10b 1
 !s100 Po_YbD=:64FlMNm60]Yf12
 Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
@@ -20,18 +20,18 @@ R0
 Z4 w1621836421
 8D:/projects/MIPS final/SSPA_D12_E5_MIPS/Adder.v
 FD:/projects/MIPS final/SSPA_D12_E5_MIPS/Adder.v
-!i122 132
+!i122 147
 Z5 L0 3 11
 Z6 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z7 !s108 1621868247.000000
+!s108 1621920830.000000
 !s107 D:/projects/MIPS final/SSPA_D12_E5_MIPS/Adder.v|
 !s90 -reportprogress|300|-work|MIPS|-stats=none|D:/projects/MIPS final/SSPA_D12_E5_MIPS/Adder.v|
 !i113 1
-Z8 o-work MIPS
-Z9 tCvgOpt 0
+Z7 o-work MIPS
+Z8 tCvgOpt 0
 n@adder32@b
 vAdder4B
 R1
@@ -44,66 +44,66 @@ R0
 R4
 8D:/projects/MIPS final/SSPA_D12_E5_MIPS/Adder4Bits.v
 FD:/projects/MIPS final/SSPA_D12_E5_MIPS/Adder4Bits.v
-!i122 133
+!i122 148
 L0 3 10
 R6
 r1
 !s85 0
 31
-R7
+Z9 !s108 1621920831.000000
 !s107 D:/projects/MIPS final/SSPA_D12_E5_MIPS/Adder4Bits.v|
 !s90 -reportprogress|300|-work|MIPS|-stats=none|D:/projects/MIPS final/SSPA_D12_E5_MIPS/Adder4Bits.v|
 !i113 1
+R7
 R8
-R9
 n@adder4@b
 vAluControl
 R1
 !i10b 1
 !s100 eVO<ElSMAkiilY@J<<H7P1
 R2
-Ie;<2]kmnjlone2>XOf>UL1
+IR1ZOaHdR[UdThj[3WY`b20
 R3
 R0
 w1621867144
-8D:\projects\MIPS final\SSPA_D12_E5_MIPS\AluControl.v
-FD:\projects\MIPS final\SSPA_D12_E5_MIPS\AluControl.v
-!i122 135
+8D:/projects/MIPS final/SSPA_D12_E5_MIPS/AluControl.v
+FD:/projects/MIPS final/SSPA_D12_E5_MIPS/AluControl.v
+!i122 150
 Z10 L0 3 66
 R6
 r1
 !s85 0
 31
-R7
-!s107 D:\projects\MIPS final\SSPA_D12_E5_MIPS\AluControl.v|
-!s90 -reportprogress|300|-work|MIPS|-stats=none|D:\projects\MIPS final\SSPA_D12_E5_MIPS\AluControl.v|
-!i113 1
-R8
 R9
+!s107 D:/projects/MIPS final/SSPA_D12_E5_MIPS/AluControl.v|
+!s90 -reportprogress|300|-work|MIPS|-stats=none|D:/projects/MIPS final/SSPA_D12_E5_MIPS/AluControl.v|
+!i113 1
+R7
+R8
 n@alu@control
 vALUKawaii
 R1
 !i10b 1
 !s100 SUTjIoacL0I?[GJHNa1280
 R2
-Im?LF:@iUeng179klQQbjS2
+IeCmk`FC7;R29L99n^Jjc73
 R3
 R0
 R4
-8D:\projects\MIPS final\SSPA_D12_E5_MIPS\ALU.v
-FD:\projects\MIPS final\SSPA_D12_E5_MIPS\ALU.v
-!i122 134
+8D:/projects/MIPS final/SSPA_D12_E5_MIPS/ALU.v
+FD:/projects/MIPS final/SSPA_D12_E5_MIPS/ALU.v
+!i122 149
 R10
 R6
 r1
 !s85 0
 31
-R7
-!s107 D:\projects\MIPS final\SSPA_D12_E5_MIPS\ALU.v|
-!s90 -reportprogress|300|-work|MIPS|-stats=none|D:\projects\MIPS final\SSPA_D12_E5_MIPS\ALU.v|
-!i113 1
-R8
 R9
+!s107 D:/projects/MIPS final/SSPA_D12_E5_MIPS/ALU.v|
+!s90 -reportprogress|300|-work|MIPS|-stats=none|D:/projects/MIPS final/SSPA_D12_E5_MIPS/ALU.v|
+!i113 1
+R7
+R8
 n@a@l@u@kawaii
 vAuxBuffer
 R1
@@ -116,21 +116,21 @@ R0
 R4
 8D:/projects/MIPS final/SSPA_D12_E5_MIPS/AuxBuffer.v
 FD:/projects/MIPS final/SSPA_D12_E5_MIPS/AuxBuffer.v
-!i122 136
+!i122 151
 Z11 L0 3 18
 R6
 r1
 !s85 0
 31
-R7
+R9
 !s107 D:/projects/MIPS final/SSPA_D12_E5_MIPS/AuxBuffer.v|
 !s90 -reportprogress|300|-work|MIPS|-stats=none|D:/projects/MIPS final/SSPA_D12_E5_MIPS/AuxBuffer.v|
 !i113 1
+R7
 R8
-R9
 n@aux@buffer
 vBasic4BitsMux
-Z12 !s110 1621868248
+Z12 !s110 1621920832
 !i10b 1
 !s100 _5g9^8z3;m3V=mhzz8:K;2
 R2
@@ -140,69 +140,69 @@ R0
 R4
 8D:/projects/MIPS final/SSPA_D12_E5_MIPS/BasicMux.v
 FD:/projects/MIPS final/SSPA_D12_E5_MIPS/BasicMux.v
-!i122 137
+!i122 152
 L0 3 20
 R6
 r1
 !s85 0
 31
-Z13 !s108 1621868248.000000
+R9
 !s107 D:/projects/MIPS final/SSPA_D12_E5_MIPS/BasicMux.v|
 !s90 -reportprogress|300|-work|MIPS|-stats=none|D:/projects/MIPS final/SSPA_D12_E5_MIPS/BasicMux.v|
 !i113 1
+R7
 R8
-R9
 n@basic4@bits@mux
 vControlUnit
 R12
 !i10b 1
 !s100 G[WCCIg;kYa3Dg7YnVZ1O1
 R2
-IQCFK>RiS:oRGQV:aXRLXJ0
+Ijm<zZ>LD:?^_RJUIX=77U1
 R3
 R0
 R4
-8D:\projects\MIPS final\SSPA_D12_E5_MIPS\ControlUnit.v
-FD:\projects\MIPS final\SSPA_D12_E5_MIPS\ControlUnit.v
-!i122 138
-Z14 L0 3 28
+8D:/projects/MIPS final/SSPA_D12_E5_MIPS/ControlUnit.v
+FD:/projects/MIPS final/SSPA_D12_E5_MIPS/ControlUnit.v
+!i122 153
+Z13 L0 3 28
 R6
 r1
 !s85 0
 31
-R13
-!s107 D:\projects\MIPS final\SSPA_D12_E5_MIPS\ControlUnit.v|
-!s90 -reportprogress|300|-work|MIPS|-stats=none|D:\projects\MIPS final\SSPA_D12_E5_MIPS\ControlUnit.v|
+Z14 !s108 1621920832.000000
+!s107 D:/projects/MIPS final/SSPA_D12_E5_MIPS/ControlUnit.v|
+!s90 -reportprogress|300|-work|MIPS|-stats=none|D:/projects/MIPS final/SSPA_D12_E5_MIPS/ControlUnit.v|
 !i113 1
+R7
 R8
-R9
 n@control@unit
 vFetchCycle
 R12
 !i10b 1
-!s100 M3jZ?0hkIecMl=LhT^Y=P0
+!s100 4U69GVan]>;64L0FePbKn0
 R2
-IW9klY9[LbGTA:=1^MiKHg2
+I7[FSOQ>n_Glo;ScTfB1>P3
 R3
 R0
-w1621859054
+w1621920826
 8D:\projects\MIPS final\SSPA_D12_E5_MIPS\FetchCycle.v
 FD:\projects\MIPS final\SSPA_D12_E5_MIPS\FetchCycle.v
-!i122 139
+!i122 154
 L0 2 39
 R6
 r1
 !s85 0
 31
-R13
+R14
 !s107 D:\projects\MIPS final\SSPA_D12_E5_MIPS\FetchCycle.v|
 !s90 -reportprogress|300|-work|MIPS|-stats=none|D:\projects\MIPS final\SSPA_D12_E5_MIPS\FetchCycle.v|
 !i113 1
+R7
 R8
-R9
 n@fetch@cycle
 vLeftShifter
-Z15 !s110 1621868249
+Z15 !s110 1621920833
 !i10b 1
 !s100 ]kFGHgAdgXFAEmGdNh=K83
 R2
@@ -212,18 +212,18 @@ R0
 R4
 8D:/projects/MIPS final/SSPA_D12_E5_MIPS/ShiftLeft2.v
 FD:/projects/MIPS final/SSPA_D12_E5_MIPS/ShiftLeft2.v
-!i122 144
+!i122 159
 R5
 R6
 r1
 !s85 0
 31
-Z16 !s108 1621868249.000000
+Z16 !s108 1621920833.000000
 !s107 D:/projects/MIPS final/SSPA_D12_E5_MIPS/ShiftLeft2.v|
 !s90 -reportprogress|300|-work|MIPS|-stats=none|D:/projects/MIPS final/SSPA_D12_E5_MIPS/ShiftLeft2.v|
 !i113 1
+R7
 R8
-R9
 n@left@shifter
 vMemory32B
 R12
@@ -236,42 +236,42 @@ R0
 R4
 8D:/projects/MIPS final/SSPA_D12_E5_MIPS/memory.v
 FD:/projects/MIPS final/SSPA_D12_E5_MIPS/memory.v
-!i122 140
-R14
+!i122 155
+R13
 R6
 r1
 !s85 0
 31
-R13
+R14
 !s107 D:/projects/MIPS final/SSPA_D12_E5_MIPS/memory.v|
 !s90 -reportprogress|300|-work|MIPS|-stats=none|D:/projects/MIPS final/SSPA_D12_E5_MIPS/memory.v|
 !i113 1
+R7
 R8
-R9
 n@memory32@b
 vMips32
 R12
 !i10b 1
 !s100 SEP;hGMTM5:KOL;Id_AKm0
 R2
-IfLEo=z0JA8SB2Oc>CV?ij2
+I>;XV<>j<A:YkVF5A9^HJb2
 R3
 R0
 w1621868241
-8D:\projects\MIPS final\SSPA_D12_E5_MIPS\Mips32Bits.v
-FD:\projects\MIPS final\SSPA_D12_E5_MIPS\Mips32Bits.v
-!i122 141
+8D:/projects/MIPS final/SSPA_D12_E5_MIPS/Mips32Bits.v
+FD:/projects/MIPS final/SSPA_D12_E5_MIPS/Mips32Bits.v
+!i122 156
 L0 3 133
 R6
 r1
 !s85 0
 31
-R13
-!s107 D:\projects\MIPS final\SSPA_D12_E5_MIPS\Mips32Bits.v|
-!s90 -reportprogress|300|-work|MIPS|-stats=none|D:\projects\MIPS final\SSPA_D12_E5_MIPS\Mips32Bits.v|
+R14
+!s107 D:/projects/MIPS final/SSPA_D12_E5_MIPS/Mips32Bits.v|
+!s90 -reportprogress|300|-work|MIPS|-stats=none|D:/projects/MIPS final/SSPA_D12_E5_MIPS/Mips32Bits.v|
 !i113 1
+R7
 R8
-R9
 n@mips32
 vMIPS_32_BITS_TB
 R15
@@ -284,7 +284,7 @@ R0
 w1621858352
 8D:\projects\MIPS final\SSPA_D12_E5_MIPS\Mips32BitsTB.v
 FD:\projects\MIPS final\SSPA_D12_E5_MIPS\Mips32BitsTB.v
-!i122 146
+!i122 161
 L0 3 126
 R6
 r1
@@ -295,34 +295,34 @@ R16
 !s90 -reportprogress|300|-work|work|-stats=none|D:\projects\MIPS final\SSPA_D12_E5_MIPS\Mips32BitsTB.v|
 !i113 1
 o-work work
-R9
+R8
 n@m@i@p@s_32_@b@i@t@s_@t@b
 vMultiplexor
-R15
+R12
 !i10b 1
 !s100 ?Z^cHkDnFS6=PI8O:<1OY2
 R2
-IQJUHF4_C;K;b155HK?nP^0
+IJf>@_>7eH?PGQXUSCKg1m1
 R3
 R0
 w1621860178
-8D:\projects\MIPS final\SSPA_D12_E5_MIPS\Mux2_1.v
-FD:\projects\MIPS final\SSPA_D12_E5_MIPS\Mux2_1.v
-!i122 142
+8D:/projects/MIPS final/SSPA_D12_E5_MIPS/Mux2_1.v
+FD:/projects/MIPS final/SSPA_D12_E5_MIPS/Mux2_1.v
+!i122 157
 L0 3 22
 R6
 r1
 !s85 0
 31
-R13
-!s107 D:\projects\MIPS final\SSPA_D12_E5_MIPS\Mux2_1.v|
-!s90 -reportprogress|300|-work|MIPS|-stats=none|D:\projects\MIPS final\SSPA_D12_E5_MIPS\Mux2_1.v|
+R14
+!s107 D:/projects/MIPS final/SSPA_D12_E5_MIPS/Mux2_1.v|
+!s90 -reportprogress|300|-work|MIPS|-stats=none|D:/projects/MIPS final/SSPA_D12_E5_MIPS/Mux2_1.v|
 !i113 1
+R7
 R8
-R9
 n@multiplexor
 vRegistryStore
-R15
+R12
 !i10b 1
 !s100 oT@NGLM6SiKDbi@Q5n:dJ0
 R2
@@ -332,18 +332,18 @@ R0
 R4
 8D:/projects/MIPS final/SSPA_D12_E5_MIPS/RegistryStore.v
 FD:/projects/MIPS final/SSPA_D12_E5_MIPS/RegistryStore.v
-!i122 143
+!i122 158
 L0 3 25
 R6
 r1
 !s85 0
 31
-R16
+R14
 !s107 D:/projects/MIPS final/SSPA_D12_E5_MIPS/RegistryStore.v|
 !s90 -reportprogress|300|-work|MIPS|-stats=none|D:/projects/MIPS final/SSPA_D12_E5_MIPS/RegistryStore.v|
 !i113 1
+R7
 R8
-R9
 n@registry@store
 vSignExtender
 R15
@@ -356,7 +356,7 @@ R0
 R4
 8D:/projects/MIPS final/SSPA_D12_E5_MIPS/signExtender.v
 FD:/projects/MIPS final/SSPA_D12_E5_MIPS/signExtender.v
-!i122 145
+!i122 160
 R11
 R6
 r1
@@ -366,6 +366,6 @@ R16
 !s107 D:/projects/MIPS final/SSPA_D12_E5_MIPS/signExtender.v|
 !s90 -reportprogress|300|-work|MIPS|-stats=none|D:/projects/MIPS final/SSPA_D12_E5_MIPS/signExtender.v|
 !i113 1
+R7
 R8
-R9
 n@sign@extender
