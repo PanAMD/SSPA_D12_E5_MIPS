@@ -1,0 +1,43 @@
+# Loading project MIPS32
+# Compile of Mips32Bits.v was successful.
+vsim work.MIPS_32_BITS_TB
+# vsim work.MIPS_32_BITS_TB 
+# Start time: 11:06:12 on Jun 06,2021
+# Loading work.MIPS_32_BITS_TB
+# Loading work.Mips32
+# Loading work.FetchCycle
+# Loading work.IFID
+# Loading work.IDEX
+# Loading work.EXMEM
+# Loading work.MEMWB
+# Loading work.SignExtender
+# Loading work.LeftShifter
+# Loading work.Adder32B
+# Loading work.Multiplexor
+# Loading work.ControlUnit
+# Loading work.Basic4BitsMux
+# Loading work.RegistryStore
+# Loading work.AluControl
+# Loading work.ALUKawaii
+# Loading work.Memory32B
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'controlUnit'.  Expected 10, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_32_BITS_TB/DUV/controlUnit File: /home/pollux/Escritorio/SSPA_D12_E5_MIPS-main/Mips32Bits.v Line: 126
+# ** Warning: (vsim-3722) /home/pollux/Escritorio/SSPA_D12_E5_MIPS-main/Mips32Bits.v(126): [TFMPC] - Missing connection for port 'RegDst'.
+# ** Warning: (vsim-3722) /home/pollux/Escritorio/SSPA_D12_E5_MIPS-main/Mips32Bits.v(126): [TFMPC] - Missing connection for port 'Branch'.
+# ** Warning: (vsim-3722) /home/pollux/Escritorio/SSPA_D12_E5_MIPS-main/Mips32Bits.v(126): [TFMPC] - Missing connection for port 'MemRead'.
+# ** Warning: (vsim-3722) /home/pollux/Escritorio/SSPA_D12_E5_MIPS-main/Mips32Bits.v(126): [TFMPC] - Missing connection for port 'MemtoReg'.
+# ** Warning: (vsim-3722) /home/pollux/Escritorio/SSPA_D12_E5_MIPS-main/Mips32Bits.v(126): [TFMPC] - Missing connection for port 'ALUOP'.
+# ** Warning: (vsim-3722) /home/pollux/Escritorio/SSPA_D12_E5_MIPS-main/Mips32Bits.v(126): [TFMPC] - Missing connection for port 'MemWrite'.
+# ** Warning: (vsim-3722) /home/pollux/Escritorio/SSPA_D12_E5_MIPS-main/Mips32Bits.v(126): [TFMPC] - Missing connection for port 'ALUSrc'.
+# ** Warning: (vsim-3722) /home/pollux/Escritorio/SSPA_D12_E5_MIPS-main/Mips32Bits.v(126): [TFMPC] - Missing connection for port 'RegWrite'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (6) does not match connection size (32) for port 'opFunction'. The port definition is at: /home/pollux/Escritorio/SSPA_D12_E5_MIPS-main/AluControl.v(4).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_32_BITS_TB/DUV/aluControl File: /home/pollux/Escritorio/SSPA_D12_E5_MIPS-main/Mips32Bits.v Line: 155
+add wave -position end  sim:/MIPS_32_BITS_TB/clk
+add wave -position end  sim:/MIPS_32_BITS_TB/DUV/fetch/Sal
+run -all
+# ** Note: $stop    : /home/pollux/Escritorio/SSPA_D12_E5_MIPS-main/Mips32BitsTB.v(124)
+#    Time: 8640 ns  Iteration: 0  Instance: /MIPS_32_BITS_TB
+# Break in Module MIPS_32_BITS_TB at /home/pollux/Escritorio/SSPA_D12_E5_MIPS-main/Mips32BitsTB.v line 124
+quit -sim
+# End time: 11:06:36 on Jun 06,2021, Elapsed time: 0:00:24
+# Errors: 0, Warnings: 12
