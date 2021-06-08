@@ -1,0 +1,120 @@
+/home/pollux/Escritorio/SSPA_D12_E5_MIPS-main/ControlUnit.v {1 {vlog -work work -stats=none /home/pollux/Escritorio/SSPA_D12_E5_MIPS-main/ControlUnit.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module ControlUnit
+
+Top level modules:
+	ControlUnit
+
+} {} {}} /home/pollux/Escritorio/SSPA_D12_E5_MIPS-main/memory.v {1 {vlog -work work -stats=none /home/pollux/Escritorio/SSPA_D12_E5_MIPS-main/memory.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Memory32B
+
+Top level modules:
+	Memory32B
+
+} {} {}} /home/pollux/Escritorio/SSPA_D12_E5_MIPS-main/ALU.v {1 {vlog -work work -stats=none /home/pollux/Escritorio/SSPA_D12_E5_MIPS-main/ALU.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module ALUKawaii
+
+Top level modules:
+	ALUKawaii
+
+} {} {}} /home/pollux/Escritorio/SSPA_D12_E5_MIPS-main/IDEX.v {1 {vlog -work work -stats=none /home/pollux/Escritorio/SSPA_D12_E5_MIPS-main/IDEX.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module IDEX
+
+Top level modules:
+	IDEX
+
+} {} {}} /home/pollux/Escritorio/SSPA_D12_E5_MIPS-main/Mux2_1.v {1 {vlog -work work -stats=none /home/pollux/Escritorio/SSPA_D12_E5_MIPS-main/Mux2_1.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Multiplexor
+
+Top level modules:
+	Multiplexor
+
+} {} {}} /home/pollux/Escritorio/SSPA_D12_E5_MIPS-main/EXMEM.v {1 {vlog -work work -stats=none /home/pollux/Escritorio/SSPA_D12_E5_MIPS-main/EXMEM.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module EXMEM
+
+Top level modules:
+	EXMEM
+
+} {} {}} /home/pollux/Escritorio/SSPA_D12_E5_MIPS-main/IFID.v {1 {vlog -work work -stats=none /home/pollux/Escritorio/SSPA_D12_E5_MIPS-main/IFID.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module IFID
+
+Top level modules:
+	IFID
+
+} {} {}} /home/pollux/Escritorio/SSPA_D12_E5_MIPS-main/Mips32Bits.v {1 {vlog -work work -stats=none /home/pollux/Escritorio/SSPA_D12_E5_MIPS-main/Mips32Bits.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Mips32
+
+Top level modules:
+	Mips32
+
+} {} {}} /home/pollux/Escritorio/SSPA_D12_E5_MIPS-main/signExtender.v {1 {vlog -work work -stats=none /home/pollux/Escritorio/SSPA_D12_E5_MIPS-main/signExtender.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module SignExtender
+
+Top level modules:
+	SignExtender
+
+} {} {}} /home/pollux/Escritorio/SSPA_D12_E5_MIPS-main/Adder.v {1 {vlog -work work -stats=none /home/pollux/Escritorio/SSPA_D12_E5_MIPS-main/Adder.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Adder32B
+
+Top level modules:
+	Adder32B
+
+} {} {}} /home/pollux/Escritorio/SSPA_D12_E5_MIPS-main/MEMWB.v {1 {vlog -work work -stats=none /home/pollux/Escritorio/SSPA_D12_E5_MIPS-main/MEMWB.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module MEMWB
+
+Top level modules:
+	MEMWB
+
+} {} {}} /home/pollux/Escritorio/SSPA_D12_E5_MIPS-main/FetchCycle.v {1 {vlog -work work -stats=none /home/pollux/Escritorio/SSPA_D12_E5_MIPS-main/FetchCycle.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module FetchCycle
+
+Top level modules:
+	FetchCycle
+
+} {} {}} /home/pollux/Escritorio/SSPA_D12_E5_MIPS-main/ShiftLeft2.v {1 {vlog -work work -stats=none /home/pollux/Escritorio/SSPA_D12_E5_MIPS-main/ShiftLeft2.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module LeftShifter
+
+Top level modules:
+	LeftShifter
+
+} {} {}} /home/pollux/Escritorio/SSPA_D12_E5_MIPS-main/AluControl.v {1 {vlog -work work -stats=none /home/pollux/Escritorio/SSPA_D12_E5_MIPS-main/AluControl.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module AluControl
+
+Top level modules:
+	AluControl
+
+} {} {}} /home/pollux/Escritorio/SSPA_D12_E5_MIPS-main/BasicMux.v {1 {vlog -work work -stats=none /home/pollux/Escritorio/SSPA_D12_E5_MIPS-main/BasicMux.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Basic4BitsMux
+
+Top level modules:
+	Basic4BitsMux
+
+} {} {}} /home/pollux/Escritorio/SSPA_D12_E5_MIPS-main/Mips32BitsTB.v {1 {vlog -work work -stats=none /home/pollux/Escritorio/SSPA_D12_E5_MIPS-main/Mips32BitsTB.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module MIPS_32_BITS_TB
+
+Top level modules:
+	MIPS_32_BITS_TB
+
+} {} {}} /home/pollux/Escritorio/SSPA_D12_E5_MIPS-main/RegistryStore.v {1 {vlog -work work -stats=none /home/pollux/Escritorio/SSPA_D12_E5_MIPS-main/RegistryStore.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module RegistryStore
+
+Top level modules:
+	RegistryStore
+
+} {} {}}

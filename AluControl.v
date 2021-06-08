@@ -62,6 +62,31 @@ always @* begin
 				end 
 		endcase
         end
+
+		3'b000: //sumI-type instruction UWU
+        begin
+			ALUout = 4'b 0001;
+		end
+
+		3'b001: //ResI-type instruction UWU
+        begin
+			ALUout = 4'b 0010;
+		end
+
+		3'b100: //SltI-type instruction UWU
+        begin
+			ALUout = 4'b 1000;
+		end
+
+		3'b011: //AndI-type instruction UWU
+        begin
+			ALUout = 4'b 0101;
+		end
+
+		3'b111: //ORI-type instruction UWU
+        begin
+			ALUout = 4'b 0110;
+		end
     endcase
 end
 

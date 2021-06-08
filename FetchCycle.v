@@ -7,8 +7,8 @@ module FetchCycle(
 	output [31:0]Sal
 );
 
+reg [7:0]pc;
 reg[31:0]outputDir;
-reg[7:0]pc;
 reg [7:0]Memory[0:399];
  
 initial begin
