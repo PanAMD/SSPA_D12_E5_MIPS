@@ -10,6 +10,7 @@ module ControlUnit(
 	output reg MemWrite,
 	output reg ALUSrc,
 	output reg RegWrite,
+	output reg jump,
 	output [9:0]SalCU
 );
 
@@ -25,6 +26,7 @@ always @*
 			MemWrite = 1'b 0;
 			ALUSrc = 1'b 0;
 			RegWrite = 1'b 1;
+			jump = 1'b 0;
 		end
 	
 	6'b 000100: //BEQ instruction-
@@ -37,6 +39,7 @@ always @*
 			MemWrite = 1'b 0;
 			ALUSrc = 1'b 0;
 			RegWrite = 1'b 0;
+			jump = 1'b 0;
 		end
 	
 	6'b 001000: //ADDi-type instruction-
@@ -49,6 +52,7 @@ always @*
 			MemWrite = 1'b 0;
 			ALUSrc = 1'b 1;
 			RegWrite = 1'b 1;
+			jump = 1'b 0;
 		end
 
 	6'b 001100: //ANDi-type instruction
@@ -61,6 +65,7 @@ always @*
 			MemWrite = 1'b 0;
 			ALUSrc = 1'b 1;
 			RegWrite = 1'b 1;
+			jump = 1'b 0;
 		end
 
 	6'b 001101: //ORi-type instruction
@@ -73,6 +78,7 @@ always @*
 			MemWrite = 1'b 0;
 			ALUSrc = 1'b 1;
 			RegWrite = 1'b 1;
+			jump = 1'b 0;
 		end
 
 	6'b 100011: //LW-type instruction-
@@ -85,6 +91,7 @@ always @*
 			MemWrite = 1'b 0;
 			ALUSrc = 1'b 1;
 			RegWrite = 1'b 1;
+			jump = 1'b 0;
 		end
 
 	6'b 101011: //SW-type instruction-
@@ -97,6 +104,7 @@ always @*
 			MemWrite = 1'b 1;
 			ALUSrc = 1'b 1;
 			RegWrite = 1'b 0;
+			jump = 1'b 0;
 		end
 
 	6'b 001010: //SLTI-type instruction-
@@ -109,6 +117,20 @@ always @*
 			MemWrite = 1'b 0;
 			ALUSrc = 1'b 1;
 			RegWrite = 1'b 1;
+			jump = 1'b 0;
+		end
+
+	6'b 000010: //JUMP-type instruction-
+		begin
+			RegDst = 1'b 0;
+			Branch = 1'b 0;
+			MemRead = 1'b 0;
+			MemtoReg = 1'b 0;
+			ALUOP = 3'b 0;
+			MemWrite = 1'b 0;
+			ALUSrc = 1'b 0;
+			RegWrite = 1'b 0;
+			jump = 1'b 1;
 		end
 	endcase
 
