@@ -7,7 +7,8 @@ module IFID(
 	output reg[31:0]sum,
 	output reg[4:0]RS,RT,RD,
 	output reg[5:0]Opcode,
-    output reg[15:0]instruction
+    output reg[15:0]instruction,
+	output reg[25:0]ins_j
 );
 
 
@@ -19,6 +20,7 @@ always @(posedge clk)
 		RT = in[20:16];
 		RD = in[15:11];
         instruction= in[15:0];
+		ins_j = in[25:0];
 	end
 
 endmodule 
