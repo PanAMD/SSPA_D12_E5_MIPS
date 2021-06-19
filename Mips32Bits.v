@@ -6,7 +6,7 @@ module Mips32(
 
 wire [31:0]MEM_B, RD1_B,RD2_B,CFetch1, RD1_B2, RD2_B2, RD2_B3;
 wire [31:0] muxyOut;
-wire [31:0] pcMux;
+wire [31:0] pcMux, pcmux2;
 wire [31:0] fetchMux4;
 wire [31:0]Mem_BFF4,Mem_BFF42,Mux3_RegStr;
 wire [5:0]COpcode;
@@ -21,18 +21,23 @@ wire [15:0]instructionBuffer;
 wire [31:0] extendedSign, extendedSign2;
 wire [31:0] shiftedData;
 wire [31:0] shiftedSumResult, shiftedSumResult2;
-wire muxy3Flag;
+wire muxy3Flag, Cjump;
 wire [3:0] aluControlOut;
 wire [4:0]registryStrWriteAddr, registryStrWriteAddr2, registryStrWriteAddr3;
 wire [9:0] CSalCU;
 wire [1:0] CWB1, CWB2, CWB3;
 wire [2:0] CM1, CM2, CM3;
 wire [4:0] CEX1, CEX2, CEX3;
+wire [25:0] instruccionJ;
+wire [27:0] base28;
+wire [31:0] jump_addr;
+
+
 
 
 FetchCycle fetch(
 	.clk(clk),
-	.inputDir(pcMux),
+	.inputDir(pcmux2),
 	.out(fetchMux4),
 	.Fetch(CFetch1),
 	.Sal(MEM_B)
@@ -47,8 +52,11 @@ IFID buffer1(
     .RT(CRT),
     .RD(CRD),
 	.Opcode(COpcode),
-    .instruction(instructionBuffer)
+    .instruction(instructionBuffer),
+    .ins_j(instruccionJ)
 );
+
+assign jump_addr = {Csum1[31:28], base28};
 
 IDEX buffer2(
     .clk(clk),
@@ -124,8 +132,17 @@ Multiplexor muxy3(
 );
 
 ControlUnit controlUnit(
+    .RegDst(RegDst),
+    .Branch(Branch),
+    .MemRead(MemRead),
+    .MemtoReg(MemtoReg),
+    .MemWrite(MemWrite),
+    .ALUSrc(ALUSrc),
+    .RegWrite(RegWrite),
 	.instruction(COpcode),
-    .SalCU(CSalCU)  
+    .SalCU(CSalCU),
+    .ALUOP(CEX1[3:1]),
+    .jump(Cjump)
 );
 
 Basic4BitsMux mux4bits(
@@ -155,7 +172,7 @@ Multiplexor muxy(
 AluControl aluControl(
     .opFunction(extendedSign2),
     .opALU(CEX1[3:1]),
-    .ALUout(aluControlOut)    
+    .ALUout(aluControlOut)
 );
 
 ALUKawaii mainALU(
@@ -169,7 +186,7 @@ ALUKawaii mainALU(
 assign muxy3Flag =(CM2[0] &  ZF2);
 
 Memory32B mainMemory(
-    .MemWrite(CM2[2]), 
+    .MemWrite(CM2[2]),
     .MemRead(CM2[1]),
     .dataInput(RD2_B3),
     .dir(aluOpResult2),
@@ -181,6 +198,18 @@ Multiplexor muxyMemOut(
     .inB(aluOpResult3),
     .Op(CWB3[1]),
     .outC(Mux3_RegStr)
+);
+
+ShiftLeft2J SL2(
+    .shift_in(instruccionJ),
+    .shift_out(base28)
+);
+
+Muxyj Multiplexorj(
+    .inA(pcMux),
+    .inB(jump_addr),
+    .Op(Cjump),
+    .outC(pcmux2)
 );
 
 endmodule
