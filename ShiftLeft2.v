@@ -6,8 +6,9 @@ module LeftShifter(
 
 );
 
-always @* begin
-    out = in << 2;
-end
+always @*
+	begin
+	   out = in << 2;
+	end
 
-endmodule
+endmodule 

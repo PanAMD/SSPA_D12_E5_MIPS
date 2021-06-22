@@ -1,215 +1,238 @@
 `timescale 1ns/1ns
 
-module Mips32(
-    input clk
+module Mips32(  
+	input clk
 );
 
-wire [31:0]MEM_B, RD1_B,RD2_B,CFetch1, RD1_B2, RD2_B2, RD2_B3;
-wire [31:0] muxyOut;
-wire [31:0] pcMux, pcmux2;
-wire [31:0] fetchMux4;
-wire [31:0]Mem_BFF4,Mem_BFF42,Mux3_RegStr;
+wire [31:0]MEM_B, RD1_B,RD2_B,CA,CB,CRes,CFetch1,CFetch2,CFetch3,Res_Mem;
 wire [5:0]COpcode;
-wire [4:0]CRS,CRT,CRD,Mux_BFF, CRT2, CRD2;
-wire [2:0]ALUOP;
-wire [31:0]aluOpResult, aluOpResult2, aluOpResult3;
-wire [31:0]Csum1, Csum2;
-
-//Control connections
-wire ZF, ZF2,RegDst,Branch,MemRead,MemtoReg,MemWrite,ALUSrc,RegWrite;
-wire [15:0]instructionBuffer;
-wire [31:0] extendedSign, extendedSign2;
-wire [31:0] shiftedData;
-wire [31:0] shiftedSumResult, shiftedSumResult2;
-wire muxy3Flag, Cjump;
-wire [3:0] aluControlOut;
-wire [4:0]registryStrWriteAddr, registryStrWriteAddr2, registryStrWriteAddr3;
-wire [9:0] CSalCU;
-wire [1:0] CWB1, CWB2, CWB3;
-wire [2:0] CM1, CM2, CM3;
-wire [4:0] CEX1, CEX2, CEX3;
-wire [25:0] instruccionJ;
-wire [27:0] base28;
-wire [31:0] jump_addr;
-
-
-
-
+wire [31:0]Shift_Sum, Sum_BFF3,MuxALU,J_BFF2,CJump2,WD_Mem,Mem_BFF4,AMux3,BMux3,Mux3_BR;
+wire [31:0]Fetch_Mux4,Fetch_Mux4_2,Fetch_Mux4_3,Fetch_Mux4_4,FetchB_Mux4,mux4_mux5;
+wire [31:0]SL_mux5,BFF2_mux5,BFF2_mux52,jumpAddress,jumpAddress2;
+wire [4:0]CRS,CRT,CRD,CRT2,CRD2,Mux_BFF,CWR,WR_BR;
+wire [3:0]Sel_B, B_ALU;
+wire [2:0]ALUOP,ALUOP1;
+wire [15:0]CJump;
+ 
+//Control conections
+wire [31:0]Mux_PC;
+wire ZF,ZF_AND,PCSrc,RegDst,Branch,MemRead,MemtoReg,MemWrite,ALUSrc,RegWrite,Jump;
+wire Branch2,MemRead2,MemtoReg2,MemWrite2,RegWrite2,Jump2,MemtoReg3,RegWrite3;
+wire RegDst1,Branch1,MemRead1,MemtoReg1,MemWrite1,ALUSrc1,RegWrite1,Jump1;
+wire [25:0]tar;
+ 
+ 
 FetchCycle fetch(
+	.out(Fetch_Mux4),
+	.inputDir(Mux_PC),
 	.clk(clk),
-	.inputDir(pcmux2),
-	.out(fetchMux4),
-	.Fetch(CFetch1),
-	.Sal(MEM_B)
+	.Sal(MEM_B),
+	.Fetch(CFetch1)
 );
 
-IFID buffer1(
-    .clk(clk),
-	.in(MEM_B),
-    .Fetchout(CFetch1),
-    .sum(Csum1),
-	.RS(CRS),
-    .RT(CRT),
-    .RD(CRD),
-	.Opcode(COpcode),
-    .instruction(instructionBuffer),
-    .ins_j(instruccionJ)
+ 
+IFID buffer1( 
+	.IFID_in(MEM_B),
+	.clk(clk),
+	.IFID_Fetch(CFetch1),
+	.IFID_contadorPc(Fetch_Mux4),
+	.IFID_RS(CRS),
+	.IFID_RT(CRT),
+	.IFID_RD(CRD),
+	.IFID_Opcode(COpcode),
+	.IFID_Jump(CJump),
+	.IFID_SFetch(CFetch2),
+	.IFID_out(tar),
+	.IFID_SContadorPc(Fetch_Mux4_2)
 );
-
-assign jump_addr = {Csum1[31:28], base28};
 
 IDEX buffer2(
-    .clk(clk),
-    .IDEX_UC(CSalCU),
-    .IDEX_SumIFID(Csum1),
-    .IDEX_DatoLeidoA(RD1_B),
-    .IDEX_DatoLeidoB(RD2_B),
-    .IDEX_DatoExtendido(extendedSign),
-    .IDEX_InsRT(CRT),
-    .IDEX_InsRD(CRD),
-    .IDEX_WB(CWB1),
-    .IDEX_M(CM1),
-    .IDEX_EX(CEX1),
-    .IDEX_SumIFIDout(Csum2),
-    .IDEX_DatoLeidoAout(RD1_B2),
-    .IDEX_DatoLeidoBout(RD2_B2),
-    .IDEX_DatoExtendidoout(extendedSign2),
-    .IDEX_InsRTout(CRT2),
-    .IDEX_InsRDout(CRD2)
+	.IDEX_Fetch(CFetch2),
+	.clk(clk),
+	.IDEX_A(RD1_B),
+	.IDEX_B(RD2_B),
+	.IDEX_SFetch(CFetch3),
+    .IDEX_SA(CA),
+	.IDEX_SB(CB),
+	.IDEX_Jump(J_BFF2),
+	.IDEX_RT(CRT),
+	.IDEX_RD(CRD),
+	.IDEX_target(SL_mux5),
+	.IDEX_contadorPc(Fetch_Mux4_2),
+	.IDEX_ControlJump(Jump),
+	.IDEX_SRD(CRD2),
+	.IDEX_SRT(CRT2),
+	.IDEX_SJump(CJump2),
+	.IDEX_RegDst(RegDst),
+	.IDEX_Branch(Branch),
+	.IDEX_MemRead(MemRead),
+	.IDEX_ALUOP(ALUOP),
+	.IDEX_MemtoReg(MemtoReg),
+	.IDEX_MemWrite(MemWrite),
+	.IDEX_ALUSrc(ALUSrc),
+	.IDEX_RegWrite(RegWrite),
+	.IDEX_SRegDst(RegDst1),
+	.IDEX_SBranch(Branch1),
+	.IDEX_SMemRead(MemRead1),
+	.IDEX_SALUOP(ALUOP1),
+    .IDEX_SMemtoReg(MemtoReg1),
+	.IDEX_SMemWrite(MemWrite1),
+	.IDEX_SALUSrc(ALUSrc1),
+	.IDEX_SRegWrite(RegWrite1),
+	.IDEX_SControlJump(Jump1),
+	.IDEX_Starget(jumpAddress),
+	.IDEX_SContadorPc(Fetch_Mux4_3)
 );
 
-EXMEM buffer3(
-    .clk(clk),
-    .EXMEM_WB(CWB1),
-    .EXMEM_M(CM1),
-    .EXMEM_SumRes(shiftedSumResult),
-    .EXMEM_ZFlag(ZF),
-    .EXMEM_ALURes(aluOpResult),
-    .EXMEM_DatoLeidoB(RD2_B2),
-    .EXMEM_MUXRes(registryStrWriteAddr),
-    .EXMEM_WBout(CWB2),
-    .EXMEM_Mout(CM2),
-    .EXMEM_SumResout(shiftedSumResult2),
-    .EXMEM_ZFlagout(ZF2),
-    .EXMEM_ALUResout(aluOpResult2),
-    .EXMEM_DatoLeidoBout(RD2_B3),
-    .EXMEM_MUXResout(registryStrWriteAddr2)
+EXMEM buffer3( 
+	.EXMEM_Fetch(Sum_BFF3),
+	.EXMEM_Res_ALU(CRes),
+	.clk(clk),
+	.EXMEM_zero_flag(ZF),
+	.EXMEM_SRes_ALU(Res_Mem),
+	.EXMEM_Write_Data(CB),
+	.EXMEM_contadorPc(Fetch_Mux4_3),
+	.EXMEM_ControlJump(Jump1),
+	.EXMEM_Sal_zf(ZF_AND),
+	.EXMEM_Write_Reg(Mux_BFF),
+	.EXMEM_target(jumpAddress),
+	.EXMEM_Sal_WR(CWR),
+	.EXMEM_SFetch(FetchB_Mux4),
+	.EXMEM_SalWD(WD_Mem),
+	.EXMEM_Branch(Branch1),
+	.EXMEM_MemRead(MemRead1),
+	.EXMEM_MemtoReg(MemtoReg1),
+	.EXMEM_MemWrite(MemWrite1),
+	.EXMEM_RegWrite(RegWrite1),
+	.EXMEM_SBranch(Branch2),
+	.EXMEM_SMemRead(MemRead2),
+	.EXMEM_SMemtoReg(MemtoReg2),
+	.EXMEM_SMemWrite(MemWrite2),
+	.EXMEM_SRegWrite(RegWrite2),
+	.EXMEM_SControlJump(Jump2),
+	.EXMEM_Starget(jumpAddress2),
+	.EXMEM_SContadorPc(Fetch_Mux4_4)
 );
-
+			
 MEMWB buffer4(
     .clk(clk),
-    .MEM_WB(CWB2),
-    .MEMWB_DatoLeido(Mem_BFF4),
-    .MEMWB_Direccion(aluOpResult2),
-    .MEMWB_MUXRes(registryStrWriteAddr2),
-    .MEMWB_WBout(CWB3),
-    .MEMWB_DatoLeidoout(Mem_BFF42),
-    .MEMWB_Direccionout(aluOpResult3),
-    .MEMWB_MUXResout(registryStrWriteAddr3)
+	.MEMWB_Read_Data(Mem_BFF4),
+	.MEMWB_ResALU(Res_Mem),
+	.MEMWB_Write_Reg(CWR),
+	.MEMWB_Sal_WR(WR_BR),
+    .MEMWB_Sal_RD(BMux3),
+	.MEMWB_SResALU(AMux3),
+	.MEMWB_MemtoReg(MemtoReg2),
+	.MEMWB_RegWrite(RegWrite2),
+	.MEMWB_SMemtoReg(MemtoReg3),
+	.MEMWB_SRegWrite(RegWrite3)
 );
 
 SignExtender signExtender(
-    .mainInput(instructionBuffer),
-	.result(extendedSign)
+	.mainInput(CJump),
+	.result(J_BFF2)
 );
 
 LeftShifter shift(
-	.in(extendedSign2),
-	.out(shiftedData)
+	.in(CJump2),
+	.out(Shift_Sum)
 );
 
 Adder32B adder32(
-	.inputA(Csum2),
-    .inputB(shiftedData),
-	.result(shiftedSumResult)
+	.inputA(CFetch3),
+	.inputB(Shift_Sum),
+	.result(Sum_BFF3)
 );
 
-Multiplexor muxy3(
-    .inA(CFetch1),
-    .inB(shiftedSumResult2),
-    .Op(muxy3Flag),
-    .outC(pcMux)
+Mux2 muxy3(
+	.A(AMux3),
+	.B(BMux3),
+	.in(MemtoReg3),
+	.Sal(Mux3_BR)
 );
 
 ControlUnit controlUnit(
-    .RegDst(RegDst),
-    .Branch(Branch),
-    .MemRead(MemRead),
-    .MemtoReg(MemtoReg),
-    .MemWrite(MemWrite),
-    .ALUSrc(ALUSrc),
-    .RegWrite(RegWrite),
 	.instruction(COpcode),
-    .SalCU(CSalCU),
-    .ALUOP(CEX1[3:1]),
-    .jump(Cjump)
+	.RegDst(RegDst),
+	.Branch(Branch),
+	.MemRead(MemRead),
+	.ALUOP(ALUOP),
+    .MemtoReg(MemtoReg),
+	.MemWrite(MemWrite),
+	.ALUSrc(ALUSrc),
+	.RegWrite(RegWrite),
+	.Jump(Jump)
 );
 
-Basic4BitsMux mux4bits(
-	.inp(CEX1[0]),
+Mux muxy1(
+	.in(RegDst1),
 	.A(CRT2),
-    .B(CRD2),
-	.out(registryStrWriteAddr)
+	.B(CRD2),
+	.Sal(Mux_BFF)
 );
-
-RegistryStore regArray(
-    .regWrite(CWB3[0]),
-    .dataInput(Mux3_RegStr),
-    .writeDir(registryStrWriteAddr3),
-    .registryAddressA(CRS),
-    .registryAddressB(CRT),
+ 
+RegistryStore regArray( 
+	.RegistryAddressA(CRS),
+	.RegistryAddressB(CRT),
+	.writeDir(WR_BR),
+	.regWrite(RegWrite3),
     .registryOutA(RD1_B),
-    .registryOutB(RD2_B)
+	.registryOutB(RD2_B),
+	.dataInput(Mux3_BR)
 );
-
-Multiplexor muxy(
-    .inA(RD2_B2),
-    .inB(extendedSign2),
-    .Op(CEX1[4]),
-    .outC(muxyOut)
+				
+Mux2 muxy2(
+	.in(ALUSrc1),
+	.A(CB),
+	.B(CJump2),
+	.Sal(MuxALU)
 );
-
+ 
 AluControl aluControl(
-    .opFunction(extendedSign2),
-    .opALU(CEX1[3:1]),
-    .ALUout(aluControlOut)
-);
-
+	.opALU(ALUOP1),
+	.opFunction(CJump2[5:0]),
+	.ALUout(Sel_B)
+);			
+ 
 ALUKawaii mainALU(
-	.inputA(RD1_B2),
-    .inputB(muxyOut),
-	.aluOperation(aluControlOut),
-	.result(aluOpResult),
-	.zeroFlag(ZF)
+	.inputA(CA),
+	.inputB(MuxALU),
+	.aluOperation(Sel_B),
+	.zeroFlag(ZF),
+	.result(CRes)
 );
-
-assign muxy3Flag =(CM2[0] &  ZF2);
-
+				
 Memory32B mainMemory(
-    .MemWrite(CM2[2]),
-    .MemRead(CM2[1]),
-    .dataInput(RD2_B3),
-    .dir(aluOpResult2),
-    .result(Mem_BFF4)
+	.dir(Res_Mem),
+	.dataInput(WD_Mem),
+	.result(Mem_BFF4),
+	.MemWrite(MemWrite2),
+	.MemRead(MemRead2)
 );
 
-Multiplexor muxyMemOut(
-    .inA(Mem_BFF42),
-    .inB(aluOpResult3),
-    .Op(CWB3[1]),
-    .outC(Mux3_RegStr)
+Mux2 muxy4(
+	.A(Fetch_Mux4_4),
+	.B(FetchB_Mux4),
+	.in(PCSrc),
+	.Sal(mux4_mux5)
 );
 
-ShiftLeft2J SL2(
-    .shift_in(instruccionJ),
-    .shift_out(base28)
+AND andbranch( 
+	.A(Branch2),
+	.B(ZF_AND),
+	.Sal(PCSrc)
 );
+	
+Mux2 muxy5(
+	.B(jumpAddress2),
+	.A(mux4_mux5),
+	.in(Jump2),
+	.Sal(Mux_PC)
+);	
 
-Muxyj Multiplexorj(
-    .inA(pcMux),
-    .inB(jump_addr),
-    .Op(Cjump),
-    .outC(pcmux2)
+LeftShifter2 shift2(
+	.in(tar),
+	.out(SL_mux5[27:0])
 );
-
+ 
 endmodule

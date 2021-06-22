@@ -10,4 +10,4 @@ always@*
 		result = inputA + inputB;
 	end
 
-endmodule
+endmodule 

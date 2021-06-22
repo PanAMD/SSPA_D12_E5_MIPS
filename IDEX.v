@@ -1,37 +1,40 @@
 `timescale 1ns/1ns
 
 module IDEX(
-    input clk,
-	input [9:0]IDEX_UC,
-    input [31:0]IDEX_SumIFID,
-    input [31:0]IDEX_DatoLeidoA,
-    input [31:0]IDEX_DatoLeidoB,
-    input [31:0]IDEX_DatoExtendido,
-    input [4:0]IDEX_InsRT,
-    input [4:0]IDEX_InsRD,
-    output reg [1:0]IDEX_WB,
-    output reg [2:0]IDEX_M,
-    output reg [4:0]IDEX_EX,
-    output reg [31:0]IDEX_SumIFIDout,
-    output reg [31:0]IDEX_DatoLeidoAout,
-    output reg [31:0]IDEX_DatoLeidoBout,
-    output reg [31:0]IDEX_DatoExtendidoout,
-    output reg [4:0]IDEX_InsRTout,
-    output reg [4:0]IDEX_InsRDout
+	input [4:0]IDEX_RD,IDEX_RT,
+	input [31:0]IDEX_A,IDEX_B,IDEX_Fetch,IDEX_Jump,
+	input [27:0]IDEX_target,
+	input [31:0]IDEX_contadorPc,
+	input IDEX_RegDst,IDEX_Branch,IDEX_MemRead,IDEX_MemtoReg,IDEX_MemWrite,IDEX_ALUSrc,IDEX_RegWrite,IDEX_ControlJump,
+	input [2:0]IDEX_ALUOP,
+	input clk,
+	output reg[4:0]IDEX_SRD,IDEX_SRT,
+	output reg[31:0]IDEX_SA,IDEX_SB,IDEX_SFetch,IDEX_SJump,IDEX_Starget,
+	output reg IDEX_SRegDst,IDEX_SBranch,IDEX_SMemRead,IDEX_SMemtoReg,IDEX_SMemWrite,IDEX_SALUSrc,IDEX_SRegWrite,IDEX_SControlJump,
+	output reg[2:0]IDEX_SALUOP,
+	output reg[31:0]IDEX_SContadorPc
 );
-
 
 always @(posedge clk)
 	begin
-		IDEX_WB = IDEX_UC[1:0];
-		IDEX_M = IDEX_UC[4:2];
-        IDEX_EX = IDEX_UC[9:5];
-        IDEX_SumIFIDout = IDEX_SumIFID;
-        IDEX_DatoLeidoAout = IDEX_DatoLeidoA;
-        IDEX_DatoLeidoBout = IDEX_DatoLeidoB;
-        IDEX_DatoExtendidoout = IDEX_DatoExtendido;
-        IDEX_InsRTout = IDEX_InsRT;
-        IDEX_InsRDout = IDEX_InsRD;
+		IDEX_SFetch = IDEX_Fetch;
+		IDEX_SA = IDEX_A;
+		IDEX_SB = IDEX_B;
+		IDEX_SJump = IDEX_Jump;
+		IDEX_SRD = IDEX_RD;
+		IDEX_SRT = IDEX_RT;
+		IDEX_Starget = {IDEX_Fetch[31:28],IDEX_target};
+		
+		IDEX_SRegDst = IDEX_RegDst;
+		IDEX_SBranch = IDEX_Branch;
+		IDEX_SMemRead = IDEX_MemRead;
+		IDEX_SMemtoReg = IDEX_MemtoReg;
+		IDEX_SMemWrite = IDEX_MemWrite;
+		IDEX_SALUSrc = IDEX_ALUSrc;
+		IDEX_SRegWrite = IDEX_RegWrite;
+		IDEX_SALUOP = IDEX_ALUOP;
+		IDEX_SControlJump = IDEX_ControlJump;
+		IDEX_SContadorPc = IDEX_contadorPc;
 	end
 
 endmodule 

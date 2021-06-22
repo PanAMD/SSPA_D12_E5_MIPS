@@ -5,16 +5,18 @@ module SignExtender(
 	output reg[31:0]result
 );
 
-always @* begin
-    case(mainInput[15])
-        1'b 0:
-        begin
-            result = mainInput;
-        end
-        1'b 1:
-        begin
-            result = {16'b 1111111111111111 ,mainInput};
-        end
-	endcase
-end
+always @*
+	case(mainInput[15])
+	
+	1'b 0:
+	begin
+		result = mainInput;
+	end
+	
+	1'b 1:
+	begin
+	 result = {16'b 1111111111111111 ,mainInput};
+	end
+	
+  endcase
 endmodule 

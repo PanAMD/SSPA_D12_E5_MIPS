@@ -1,6 +1,6 @@
 `timescale 1ns/1ns
 
-module MIPS_32_BITS_TB();
+module Mips32TB();
 
 reg clk = 1;
 

@@ -5,8 +5,9 @@ module Adder4B(
 	output reg [6:0]pcOut
 );
 
-always@* begin
-    pcOut = pcInput + 7'd 4;
+always@*
+begin
+	pcOut = pcInput + 7'd 4;
 end
 
-endmodule
+endmodule 

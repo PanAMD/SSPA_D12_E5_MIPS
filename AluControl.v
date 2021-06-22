@@ -1,21 +1,22 @@
 `timescale 1ns/1ns
 
 module AluControl(
-    input [5:0] opFunction,
-    input [2:0] opALU,
-    output reg [3:0]ALUout
+	input [5:0]opFunction,
+	input [2:0]opALU,
+	output reg[3:0]ALUout
 );
 
-always @* begin
-    case (opALU)
-        3'b010: //R-type instruction UWU
-        begin
-
-        case (opFunction)
-            6'b 000000: //NOP
+always @*
+	case(opALU)
+	
+	3'b 010: //R-type instruction UWU
+			case(opFunction)
+			
+			6'b 000000: //NOP
 				begin
 					ALUout = 4'b 0000;
 				end
+				
 			6'b 100000: //ADD
 				begin
 					ALUout = 4'b 0001;
@@ -25,13 +26,13 @@ always @* begin
 				begin
 					ALUout = 4'b 0010;
 				end
-
+			
 			6'b 011001: //PRODUCT
 				begin
 					ALUout = 4'b 0011;
 				end
-	
-			6'b 011010: //DIVISION
+				
+			6'b 011010: //DIVISIÓN
 				begin
 					ALUout = 4'b 0100;
 				end
@@ -40,7 +41,7 @@ always @* begin
 				begin
 					ALUout = 4'b 0101;
 				end
-				
+			
 			6'b 100101: //OR
 				begin
 					ALUout = 4'b 0110;
@@ -60,34 +61,40 @@ always @* begin
 				begin
 					ALUout = 4'b 1000;
 				end 
+				
+			endcase
+			
+	3'b 000: //sumI-type instruction UWU
+	
+			begin
+					ALUout = 4'b 0001; 
+			end
+			
+	3'b 001: //ResI-type instruction UWU
+	
+			begin
+					ALUout = 4'b 0010; 
+			end
+	
+	3'b 100: //SltI-type instruction UWU
+	
+			begin
+					ALUout = 4'b 1000; //STL
+			end
+			
+	3'b 011: //AndI-type instruction UWU
+	
+			begin
+					ALUout = 4'b 0101; //AND
+			end
+			
+			
+	3'b 101: //ORI-type instruction UWU
+	
+			begin
+					ALUout = 4'b 0110; //OR
+			end
+			
 		endcase
-        end
 
-		3'b000: //sumI-type instruction UWU
-        begin
-			ALUout = 4'b 0001;
-		end
-
-		3'b001: //ResI-type instruction UWU
-        begin
-			ALUout = 4'b 0010;
-		end
-
-		3'b100: //SltI-type instruction UWU
-        begin
-			ALUout = 4'b 1000;
-		end
-
-		3'b011: //AndI-type instruction UWU
-        begin
-			ALUout = 4'b 0101;
-		end
-
-		3'b111: //ORI-type instruction UWU
-        begin
-			ALUout = 4'b 0110;
-		end
-    endcase
-end
-
-endmodule
+endmodule 
