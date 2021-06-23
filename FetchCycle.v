@@ -1,3 +1,4 @@
+`timescale 1ns/1ns
 
 module FetchCycle(
 	input clk,
@@ -7,34 +8,36 @@ module FetchCycle(
 	output [31:0]Sal
 );
 
-reg [7:0]pc;
-reg[31:0]outputDir;
-reg [7:0]Memory[0:399];
+ reg[31:0]DirSalida;
+ reg[7:0]pc;
+ reg [7:0]MEM[149:0];
  
-initial begin
-    pc = 8'd 0;
-end
+initial
+	begin
+		pc = 8'd 0;
+	end
 	
 always @(posedge clk)
-begin
-        if (inputDir >= 32'd 0 )
+ begin
+		if (inputDir >= 32'd 0 )
 			begin
-				outputDir = inputDir;
+				DirSalida = inputDir;
 			end
 		else
 			begin
-				outputDir = 32'd 0;
+				DirSalida = 32'd 0;
 			end
-		pc = outputDir;
+		pc = DirSalida;
 		pc = pc + 8'd 4;
 		out=pc;
 		Fetch=pc;
-end
+ end
 	
-initial begin
-		$readmemb("TestF1_MemInst.mem", Memory);
-end
+initial
+	begin
+		$readmemb("Instrucciones.txt", MEM);
+	end
  
-assign Sal = {Memory[outputDir],Memory[outputDir+1],Memory[outputDir+2],Memory[outputDir+3]}; // se concatena
+assign Sal = {MEM[DirSalida],MEM[DirSalida+1],MEM[DirSalida+2],MEM[DirSalida+3]}; // se concatena
    
-endmodule
+endmodule 

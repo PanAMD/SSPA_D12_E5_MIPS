@@ -1,26 +1,23 @@
 `timescale 1ns/1ns
 
 module MEMWB(
-    input clk,
-    input [1:0]MEM_WB,
-    input [31:0]MEMWB_DatoLeido,
-    input [31:0]MEMWB_Direccion,
-    input [4:0]MEMWB_MUXRes,
-    output reg [1:0]MEMWB_WBout,
-    output reg [31:0]MEMWB_DatoLeidoout,
-    output reg [31:0]MEMWB_Direccionout,
-    output reg [4:0]MEMWB_MUXResout
+	input [31:0]MEMWB_Read_Data,MEMWB_ResALU,
+	input[4:0]MEMWB_Write_Reg,
+	input MEMWB_MemtoReg,MEMWB_RegWrite,
+	input clk,
+	output reg[31:0]MEMWB_Sal_RD, MEMWB_SResALU,
+	output reg[4:0]MEMWB_Sal_WR,
+	output reg MEMWB_SMemtoReg,MEMWB_SRegWrite
 );
-
 
 always @(posedge clk)
 	begin
-        MEMWB_WBout = MEM_WB;
-        MEMWB_DatoLeidoout = MEMWB_DatoLeido;
-        MEMWB_Direccionout = MEMWB_Direccion;
-        MEMWB_MUXResout = MEMWB_MUXRes;
+		MEMWB_Sal_RD = MEMWB_Read_Data;
+	    MEMWB_SResALU = MEMWB_ResALU;
+		MEMWB_Sal_WR = MEMWB_Write_Reg;
+		
+		MEMWB_SMemtoReg = MEMWB_MemtoReg;
+		MEMWB_SRegWrite = MEMWB_RegWrite;
 	end
 
 endmodule 
-
-
